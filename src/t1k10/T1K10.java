@@ -17,10 +17,10 @@ public class T1K10 {
         System.out.println("Das Jahresgehalt von " + gg.getVorname() + " " + gg.getNachname() + " beträgt: " + (gg.berechneJahresgehalt()) + "€");
 
         //über die Methode calculateNewMonatsgehalt ein neues Montagsgehalt für mm übergeben.
-        mm.calculateNewMonatsgehalt(15);
+        mm.erhoeheMonatsgehaltInProzent(15);
         //über die Methode calculateNewMonatsgehalt ein neues Montagsgehalt für gg übergeben.
-        gg.calculateNewMonatsgehalt(3);
-        
+        gg.erhoeheMonatsgehaltInProzent(3);
+
         //Ausgabe des neuen Monatsgehaltes des Mitarbeiters mm.
         System.out.format("Nach der Anpassung beträgt das Jahresgehalt von %s %s, %.2f€\n", mm.getVorname(), mm.getNachname(), (mm.berechneJahresgehalt()));
         //Ausgabe des neuen Monatsgehaltes des Mitarbeiters gg.
