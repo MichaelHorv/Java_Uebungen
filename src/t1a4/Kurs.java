@@ -32,7 +32,7 @@ public class Kurs {
     public boolean stornieren(String teilnehmerName) {
         for (int i = 0; i < teilnehmer.length; i++) {
             if (teilnehmer[i] != null && Objects.equals(teilnehmerName, teilnehmer[i])) {
-                System.out.println("Der Teilnehmer " + teilnehmerName + "wurde aus dem Kurs entfernt.");
+                System.out.println("Der Teilnehmer " + teilnehmerName + " wurde aus dem Kurs entfernt.");
                 return true;
             }
         }
@@ -43,13 +43,12 @@ public class Kurs {
     public void drucken() {
         int teilnehmeranzahl = 0;
         System.out.println("Folgende Teilnehmer befinden sich im Kurs: ");
-        for (int i = 0; i < teilnehmer.length; i++) {
-            if (teilnehmer[i] != null) {
+        for (String einTeilnehmer: teilnehmer) {
+            if (einTeilnehmer!=null) {
                 teilnehmeranzahl++;
-                System.out.print(teilnehmer[i] + ", ");
+                System.out.print(einTeilnehmer + ", ");
             }
         }
         System.out.println("\nDer " + kursname + " kostet " + kurspreis + " und hat: " + teilnehmeranzahl + " Teilnehmer.");
-
     }
 }
