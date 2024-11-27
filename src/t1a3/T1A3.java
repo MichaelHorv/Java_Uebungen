@@ -9,7 +9,7 @@ public class T1A3 {
         meineHunde[1] = new Hund("Bello", 8);
         meineHunde[2] = new Hund("Kiri", 4);
 
-        //Schleife mit der Ausgabe
+        //for each - Schleife mit der Ausgabe
         for (Hund hund : meineHunde) {
             hund.bellen();
         }
