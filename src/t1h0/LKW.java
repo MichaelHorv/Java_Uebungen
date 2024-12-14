@@ -1,8 +1,8 @@
 package t1h0;
 
 public class LKW {
-    protected int baujahr;
-    protected String hersteller;
+    private int baujahr;
+    private String hersteller;
 
     public LKW(int baujahr, String hersteller) {
         this.baujahr = baujahr;

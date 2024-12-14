@@ -9,6 +9,8 @@ public class Sattelschlepper extends LKW {
     }
     @Override
     public void drucken() {
+        System.out.println("Sattelschlepper");
+        super.drucken();
         System.out.println("Laderraumvolumen: " + volumenLaderaum);
     }
 }

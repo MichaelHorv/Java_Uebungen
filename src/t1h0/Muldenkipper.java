@@ -10,6 +10,8 @@ public class Muldenkipper extends LKW {
 
     @Override
     public void drucken() {
+        System.out.println("Muldenkipper");
+        super.drucken();
         System.out.println("Beladung in tonnen:" + tonnenBeladung);
     }
 }
