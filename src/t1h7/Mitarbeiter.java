@@ -7,7 +7,7 @@ public abstract class Mitarbeiter {
     private int eintrittsJahr;
     private double stundenLohn;
 
-    public Mitarbeiter(int personalnummer, String name, String adresse, int eintrittsJahr, double stundenLohn){
+    public Mitarbeiter(int personalnummer, String name, String adresse, int eintrittsJahr, double stundenLohn) {
         this.personalnummer = personalnummer;
         this.name = name;
         this.adresse = adresse;
@@ -15,16 +15,17 @@ public abstract class Mitarbeiter {
         this.stundenLohn = stundenLohn;
     }
 
-    public int getPersonalnummer(){
+    public int getPersonalnummer() {
         return personalnummer;
     }
 
-    public double berechneMonatsgehalt(){
-        return stundenLohn*154;
+    public double berechneMonatsgehalt() {
+        return stundenLohn * 154;
     }
 
-    public void drucken(){
+    public void drucken() {
         System.out.println("--------------------------------------------------------");
+        System.out.println("Stellenbeschreibung: " + this.getClass().getSimpleName());
         System.out.println("Personalnummer: " + personalnummer);
         System.out.println("Name: " + name);
         System.out.println("Adresse: " + adresse);
@@ -32,7 +33,6 @@ public abstract class Mitarbeiter {
         System.out.println("Stundenlohn: " + stundenLohn);
         System.out.println("Monatsgehalt: " + berechneMonatsgehalt());
     }
-
 
 
 }

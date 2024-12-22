@@ -1,22 +1,25 @@
 package t1h7;
 
 public class Unternehmen {
-    Mitarbeiter[] ITSec = new Mitarbeiter[30];
+    private int anzahlmaxMitarbeiter = 30;
+    private String unternehmensName = "ITSec";
 
-    public boolean mitarbeiterAufnehmen(Mitarbeiter mitarbeiter) {
-        for (int i = 0; i < ITSec.length; i++) {
-            if (ITSec[i] == null) {
-                ITSec[i] = mitarbeiter;
+    Mitarbeiter[] unternehmen = new Mitarbeiter[anzahlmaxMitarbeiter];
+
+    public boolean mitarbeiterAufnehmen(Mitarbeiter m) {
+        for (int i = 0; i < unternehmen.length; i++) {
+            if (unternehmen[i] == null) {
+                unternehmen[i] = m;
                 return true;
             }
         }
         return false;
     }
 
-    public boolean mitarbeiterKuendigen(int perso) {
-        for (int i = 0; i < ITSec.length; i++) {
-            if (perso == ITSec[i].getPersonalnummer()) {
-                ITSec[i] = null;
+    public boolean mitarbeiterKuendigen(int pnr) {
+        for (int i = 0; i < unternehmen.length; i++) {
+            if (unternehmen[i] != null && unternehmen[i].getPersonalnummer() == pnr) {
+                unternehmen[i] = null;
                 return true;
             }
         }
@@ -26,7 +29,7 @@ public class Unternehmen {
 
     public double gesamtlohnkostenBerechnen() {
         double gesamtlohnkisten = 0;
-        for (Mitarbeiter einMitarbeiter : ITSec) {
+        for (Mitarbeiter einMitarbeiter : unternehmen) {
             if (einMitarbeiter != null) {
                 gesamtlohnkisten += einMitarbeiter.berechneMonatsgehalt();
             }
@@ -35,11 +38,13 @@ public class Unternehmen {
     }
 
     public void drucken() {
-        for (Mitarbeiter einMitarbeiter : ITSec) {
+        for (Mitarbeiter einMitarbeiter : unternehmen) {
             if (einMitarbeiter != null) {
                 einMitarbeiter.drucken();
-                System.out.println("Gesamtlohnkosten: " + gesamtlohnkostenBerechnen());
             }
         }
+        System.out.println("------------------GESAMTLOHNKOSTEN------------------");
+        System.out.println("Für das Unternehmen " + unternehmensName + " betragen die Gesamtlohnkosten: " + gesamtlohnkostenBerechnen());
+        System.out.println("----------------------------------------------------");
     }
 }

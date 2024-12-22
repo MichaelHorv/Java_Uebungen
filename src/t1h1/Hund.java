@@ -21,6 +21,6 @@ public abstract class Hund {
         System.out.println("Name: " + name);
         System.out.println("Alter: " + alter);
         System.out.println("Gewicht: " + gewicht);
-        System.out.format("Steuer: %.2f€\n",steuer());
+        System.out.format("Steuer: %.2f€\n", steuer());
     }
 }
