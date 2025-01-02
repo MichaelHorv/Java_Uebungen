@@ -1,6 +1,6 @@
 package t1a1;
 
-import java.util.Arrays;
+import java.time.Year;
 
 public class Pulsfrequenz {
     private int gdJahr;
@@ -21,14 +21,15 @@ public class Pulsfrequenz {
     }
 
     public int maxFrequenz() {
-        return (int) (223 - (2024 - gdJahr) * 0.9);
+
+        return (int) (223 - (Year.now().getValue() - gdJahr) * 0.9);
     }
 
     public int[] zielFrequenz() {
         //Array deklarieren, um in der richtigen größe anlegen.
         int[] zf = new int[2];
         int mf = maxFrequenz();
-        zf[0] = (int)(mf * 0.5);
+        zf[0] = (int) (mf * 0.5);
         zf[1] = (int) (mf * 0.85);
         return zf;
     }
