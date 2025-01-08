@@ -38,13 +38,15 @@ public class Unternehmen {
     }
 
     public void drucken() {
+        int anzahlMitarbeiter = 0;
         for (Mitarbeiter einMitarbeiter : unternehmen) {
             if (einMitarbeiter != null) {
                 einMitarbeiter.drucken();
+                anzahlMitarbeiter++;
             }
         }
-        System.out.println("------------------GESAMTLOHNKOSTEN------------------");
-        System.out.println("Für das Unternehmen " + unternehmensName + " betragen die Gesamtlohnkosten: " + gesamtlohnkostenBerechnen());
-        System.out.println("----------------------------------------------------");
+        System.out.println("------------------------------------GESAMTLOHNKOSTEN------------------------------------");
+        System.out.println("Für das Unternehmen " + unternehmensName + " betragen die Gesamtlohnkosten mit " + anzahlMitarbeiter + " Mitarbeiter : " + gesamtlohnkostenBerechnen() + "€.");
+        System.out.println("----------------------------------------------------------------------------------------");
     }
 }

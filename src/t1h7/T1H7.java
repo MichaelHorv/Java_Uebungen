@@ -12,67 +12,58 @@ public class T1H7 {
 
         Unternehmen ITS = new Unternehmen();
 
-        Unternehmen LTS = new Unternehmen();
-
-        Mitarbeiter hans = new Angestellter(123, "Peter Hans", "Weitweg2" , 2012, 12);
-        LTS.mitarbeiterAufnehmen(hans);
-        LTS.mitarbeiterKuendigen(123);
-
         if (ITS.mitarbeiterAufnehmen(m1)) {
-            System.out.println("Mitarbeiter befindet sich jetzt im Unternehmen.");
+            System.out.println("Der Mitarbeiter befindet sich jetzt im Unternehmen.");
         } else {
             System.out.println("Es konnte keine freie Stelle für den Mitarbeiter gefunden werden.");
         }
         if (ITS.mitarbeiterAufnehmen(m2)) {
-            System.out.println("Mitarbeiter befindet sich jetzt im Unternehmen.");
+            System.out.println("Der Mitarbeiter befindet sich jetzt im Unternehmen.");
         } else {
             System.out.println("Es konnte keine freie Stelle für den Mitarbeiter gefunden werden.");
         }
         if (ITS.mitarbeiterAufnehmen(m3)) {
-            System.out.println("Mitarbeiter befindet sich jetzt im Unternehmen.");
+            System.out.println("Der Mitarbeiter befindet sich jetzt im Unternehmen.");
         } else {
             System.out.println("Es konnte keine freie Stelle für den Mitarbeiter gefunden werden.");
         }
         if (ITS.mitarbeiterAufnehmen(m4)) {
-            System.out.println("Mitarbeiter befindet sich jetzt im Unternehmen.");
+            System.out.println("Der Mitarbeiter befindet sich jetzt im Unternehmen.");
         } else {
             System.out.println("Es konnte keine freie Stelle für den Mitarbeiter gefunden werden.");
         }
         if (ITS.mitarbeiterAufnehmen(m5)) {
-            System.out.println("Mitarbeiter befindet sich jetzt im Unternehmen.");
+            System.out.println("Der Mitarbeiter befindet sich jetzt im Unternehmen.");
         } else {
             System.out.println("Es konnte keine freie Stelle für den Mitarbeiter gefunden werden.");
         }
         if (ITS.mitarbeiterAufnehmen(m6)) {
-            System.out.println("Mitarbeiter befindet sich jetzt im Unternehmen.");
+            System.out.println("Der Mitarbeiter befindet sich jetzt im Unternehmen.");
         } else {
             System.out.println("Es konnte keine freie Stelle für den Mitarbeiter gefunden werden.");
         }
         if (ITS.mitarbeiterAufnehmen(m7)) {
-            System.out.println("Mitarbeiter befindet sich jetzt im Unternehmen.");
+            System.out.println("Der Mitarbeiter befindet sich jetzt im Unternehmen.");
         } else {
             System.out.println("Es konnte keine freie Stelle für den Mitarbeiter gefunden werden.");
         }
         ITS.drucken();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        System.out.println("\n\n\n\n\n\n\n\n");
+
         if (ITS.mitarbeiterKuendigen(671)) {
-            System.out.println("Mitarbeiter wurde gekündigt.");
+            System.out.println("Der Mitarbeiter wurde gekündigt.");
         } else {
-            System.out.println("Mitarbeiter wurde nicht gefunden.");
+            System.out.println("Der Mitarbeiter wurde nicht gefunden.");
         }
         if (ITS.mitarbeiterKuendigen(2011)) {
-            System.out.println("Mitarbeiter wurde gekündigt.");
+            System.out.println("Der Mitarbeiter wurde gekündigt.");
         } else {
-            System.out.println("Mitarbeiter wurde nicht gefunden.");
+            System.out.println("Der Mitarbeiter wurde nicht gefunden.");
         }
         if (ITS.mitarbeiterKuendigen(20123)) {
-            System.out.println("Mitarbeiter wurde gekündigt.");
+            System.out.println("Der Mitarbeiter wurde gekündigt.");
         } else {
-            System.out.println("Mitarbeiter wurde nicht gefunden.");
+            System.out.println("Der Mitarbeiter wurde nicht gefunden.");
         }
         ITS.drucken();
     }
