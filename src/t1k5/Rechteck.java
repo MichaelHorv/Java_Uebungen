@@ -4,9 +4,9 @@ public class Rechteck {
     private int SeiteA;
     private int SeiteB;
 
-    public Rechteck(int a, int b) {
-        SeiteA = a;
-        SeiteB = b;
+    public Rechteck(int seiteA, int seiteB) {
+        SeiteA = seiteA;
+        SeiteB = seiteB;
     }
 
     public int flaeche() {
